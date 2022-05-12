@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { classInstanceReducer } from 'redux-class-watcher';
-import { aliceNetAdapter } from '../adapter/alicenetadapter';
-import { aliceNetProvider } from '../config/config';
+import { aliceNetAdapter } from 'adapters/alicenetadapter';
+import { aliceNetProvider } from 'config/config';
 
 // Generic App Reducer State
 const appSlice = createSlice({

@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { aliceNetAdapter } from '../adapter/alicenetadapter';
+import { aliceNetAdapter } from 'adapters/alicenetadapter';
 import { appSliceReducer, aliceNetAdapterReducer, aliceNetWalletReducer } from './reducers';
 
 const store = configureStore({

@@ -4,18 +4,10 @@ module.exports = {
 
     overrideWebpackConfig: ({ webpackConfig, cracoConfig, pluginOptions, context: { env, paths } }) => {
 
-        console.log(webpackConfig)
-        console.log("next is craco")
-        console.log(cracoConfig)
-
-
-        console.log(env);
-        console.log(paths);
-
-        let webpackConfigAdjust = { ...webpackConfig };
+        let webpackConfigAdjust = Object.assign({}, webpackConfig);
 
         webpackConfigAdjust.resolve = {
-            ...webpackConfig,
+            ...webpackConfig.resolve,
             alias: {
                 process: require.resolve('process'),
                 Buffer: require.resolve('buffer'),
@@ -47,8 +39,7 @@ module.exports = {
             libraryTarget: "umd"
         };
         
-        console.log(webpackConfigAdjust)
-
+        console.log(webpackConfigAdjust);
         return webpackConfigAdjust;
 
     }
