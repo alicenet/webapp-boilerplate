@@ -11,6 +11,10 @@ module.exports = {
             alias: {
                 process: require.resolve('process'),
                 Buffer: require.resolve('buffer'),
+                '../../theme.config': require('path').join(
+                    __dirname,
+                    '../src/semantic-ui/theme.config',
+                ),
             },
             fallback: {
                 path: require.resolve('path-browserify'),
@@ -38,7 +42,7 @@ module.exports = {
             ...webpackConfig.output,
             libraryTarget: "umd"
         };
-        
+
         console.log(webpackConfigAdjust);
         return webpackConfigAdjust;
 
