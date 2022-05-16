@@ -20,3 +20,7 @@ Changes and upgrade should be made to it as needed however additions should be m
 This project should be bare cloned as opposed to forked when starting new projects
 
 Follow the steps (here)[https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository] to create a clone of this repository for building an application
+
+## Debug Panel
+
+Debug can be accessed at `/debug`
