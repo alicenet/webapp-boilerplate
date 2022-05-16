@@ -3,6 +3,7 @@ import { Menu } from "semantic-ui-react";
 import { Link, Route, Routes } from "react-router-dom";
 import {
     DebugComponentList,
+    DebugState
 } from "pages";
 
 export function DebugMenuAndPaths() {
@@ -18,7 +19,7 @@ export function DebugMenuAndPaths() {
         </Menu>
         <Routes>
             <Route path="/components" element={<DebugComponentList />} />
-            <Route path="/state" element={<>State</>} />
+            <Route path="/state" element={<DebugState />} />
         </Routes>
     </>)
 }

@@ -10,16 +10,15 @@ const appSlice = createSlice({
         activePanel: false,
         settings: {
             aliceNetProvider: aliceNetProvider,
-            theme: "dark",
         },
-        loading: "", // For global load dimmer
+        loading: false, // For global loading status
     },
     reducers: {
         setLoading: (state, action) => { // For testing redux state TODO: Remove
             state.loading = action.payload;
         },
         clearLoading: (state) => {
-            state.loading = "";
+            state.loading = false;
         }
     },
 })
